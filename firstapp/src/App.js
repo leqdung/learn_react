@@ -17,7 +17,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Le quang dung
+          Author: Le quang dung
         </a>
       </header>
     </div>
