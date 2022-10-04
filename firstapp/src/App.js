@@ -1,10 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Car from "./Car.js";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Car />
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -15,8 +17,9 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          I am dung, and learing ractjs
         </a>
+        <Car />
       </header>
     </div>
   );
