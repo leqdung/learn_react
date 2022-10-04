@@ -17,9 +17,8 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          I am dung, and learing ractjs
+          Le quang dung
         </a>
-        <Car />
       </header>
     </div>
   );

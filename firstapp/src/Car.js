@@ -1,10 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from "./logo.svg";
+import "./App.css";
 
 function Car() {
-  return (
-    <h1>i am a Car</h1>
-  );
+  var html = <i class="fas fa-h2 ">I am boss car</i>;
+  return html;
 }
 
 export default Car;
