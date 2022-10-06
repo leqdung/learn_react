@@ -42,14 +42,21 @@ function App() {
       {fcomment}
       <hr />
 
-      {comments.map((item) => (
-        <Comment
-          key={item.id}
-          author={item.author}
-          content={item.content}
-          timeAgo={item.timeAgo}
-        />
-      ))}
+      {comments.length <= 0 ? (
+        <p>No comments</p>
+      ) : (
+        comments.map((item) => (
+          <Comment
+            key={item.id}
+            author={item.author}
+            content={item.content}
+            timeAgo={item.timeAgo}
+          />
+        ))
+      )}
+      <hr />
+
+      {comments.length >= 0 && <p>Total of comments : {comments.length}</p>}
     </div>
   );
 }
