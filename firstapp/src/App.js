@@ -30,6 +30,7 @@ function App() {
   const fcomment = comments.map((item) => {
     return (
       <FComment
+        key={item.id}
         author={item.author}
         content={item.content}
         timeAgo={item.timeAgo}
@@ -39,40 +40,16 @@ function App() {
   return (
     <div className="ui component">
       {fcomment}
-      {/* <FComment
-        author="Thor"
-        content="I am GOD."
-        timeAgo="Today is at 6:00 pm"
-      />
-      <FComment
-        author="Spider man"
-        content="I am a spider."
-        timeAgo="Today is at 0:00 pm"
-      />
-      <FComment
-        author="Worvlin"
-        content="I am a worlf."
-        timeAgo="Today is at 2:00 pm"
-      /> */}
-
       <hr />
-      <Comment
-        author="Worvlin"
-        content="I am a worlf."
-        timeAgo="Today is at 2:00 pm"
-      />
 
-      <Comment
-        author="Ant man"
-        content="I am a Ant."
-        timeAgo="Today is at 0:00 pm"
-      />
-
-      <Comment
-        author="Ant man"
-        content="I am a Ant."
-        timeAgo="Today is at 0:00 pm"
-      />
+      {comments.map((item) => (
+        <Comment
+          key={item.id}
+          author={item.author}
+          content={item.content}
+          timeAgo={item.timeAgo}
+        />
+      ))}
     </div>
   );
 }
