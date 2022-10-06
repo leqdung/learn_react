@@ -1,6 +1,6 @@
 import React from "react";
 
-const FComment = () => {
+const FComment = (props) => {
   return (
     <div className="ui container comment">
       <a href="#" className="avatar">
@@ -8,12 +8,12 @@ const FComment = () => {
       </a>
       <div className="content">
         <a href="#" className="author">
-          Author
+          {props.author}
         </a>
         <div className="metadata">
-          <span className="date">Today at 19:00</span>
+          <span className="date">{props.timeAgo}</span>
         </div>
-        <div className="text">Nice blog post</div>
+        <div className="text">{props.content}</div>
       </div>
     </div>
   );
