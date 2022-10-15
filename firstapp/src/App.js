@@ -1,9 +1,15 @@
 import './App.css';
-// Viết css cho các thành phần trong component
-// Viết trực tiếp vào function component hoặc viết vào file riêng App.css
-// =========
-// App() là  parent component: trong quan hệ cha con liên quan đến props
+
+// import dũ liệu
+import { YoutubeData } from './YoutubeData';
+
 function App() {
+  // Cách xử lý dữ liệu được trả về ? dùng Map để xử lý
+  // có thể dùng Map ngay trong function
+  // const numbers = [1, 2, 3, 4, 6, 9];
+  // const double = numbers.map((item) => item * 2);
+  // console.log(double);
+
   return (
     <div className='youtube-list'>
       <YoutubeItem
@@ -34,9 +40,6 @@ function App() {
   );
 }
 
-// minh họa props : dung youtube item component
-// mục đích của props : là để thay đổi ảnh bìa, tên người, title,avatar ==> props sinh ra để được truyền vào chỗ cần thay đổi trong component
-// {data}:  tat cả các dữ liệu đều được lưu trong dấu
 function YoutubeItem(props) {
   console.log(props);
   return (
