@@ -10,8 +10,8 @@ export const YoutubeData = [
   },
   {
     id: 2,
-    title: 'awesom title',
-    author: 'this is author',
+    title: 'awesom title 2',
+    author: 'this is author 3',
     image:
       'https://images.unsplash.com/photo-1544644986-1b798640b29c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=888&q=80',
     avatar:
@@ -19,8 +19,8 @@ export const YoutubeData = [
   },
   {
     id: 3,
-    title: 'awesom title',
-    author: 'this is author',
+    title: 'awesom title 3',
+    author: 'this is author 3',
     image:
       'https://images.unsplash.com/photo-1544644986-1b798640b29c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=888&q=80',
     avatar:

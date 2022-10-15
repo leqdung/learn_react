@@ -9,39 +9,26 @@ function App() {
   // const numbers = [1, 2, 3, 4, 6, 9];
   // const double = numbers.map((item) => item * 2);
   // console.log(double);
-
+  // console.log(YoutubeData);
   return (
     <div className='youtube-list'>
-      <YoutubeItem
-        image='https://images.unsplash.com/photo-1489176876421-3b720db0fb3d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'
-        avatar='https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80'
-        title='Title awesome'
-        author='leQdung'
-      />
-      <YoutubeItem
-        image='https://images.unsplash.com/photo-1489176876421-3b720db0fb3d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'
-        avatar='https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80'
-        title='Title awesome'
-        author='leQdung'
-      />
-      <YoutubeItem
-        image='https://images.unsplash.com/photo-1489176876421-3b720db0fb3d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'
-        avatar='https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80'
-        title='Title awesome'
-        author='leQdung'
-      />
-      <YoutubeItem
-        image='https://images.unsplash.com/photo-1489176876421-3b720db0fb3d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'
-        avatar='https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80'
-        title='Title awesome'
-        author='leQdung'
-      />
+      {YoutubeData.map((item, index) => (
+        // Kiem tra sự hoạt động của map. chú ý  Cần sử dụng key
+        // <div key={item.id}>Hello {index + 1}</div>
+        <YoutubeItem
+          key={item.id}
+          image={item.image}
+          avatar={item.avatar}
+          title={item.title}
+          author={item.author}
+        />
+      ))}
     </div>
   );
 }
 
 function YoutubeItem(props) {
-  console.log(props);
+  // console.log(props);
   return (
     <div className='youtube__item'>
       <div className='youtube__image'>
