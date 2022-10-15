@@ -12,17 +12,26 @@ function App() {
   // console.log(YoutubeData);
   return (
     <div className='youtube-list'>
-      {YoutubeData.map((item, index) => (
+      {/* dấu () sau dấu => là cách viết rút gọn của => { return (...)} */}
+      {/* viet đầy đủ khi cần xử lý thêm thông tin */}
+      {YoutubeData.map((item, index) => {
         // Kiem tra sự hoạt động của map. chú ý  Cần sử dụng key
         // <div key={item.id}>Hello {index + 1}</div>
-        <YoutubeItem
-          key={item.id}
-          image={item.image}
-          avatar={item.avatar}
-          title={item.title}
-          author={item.author}
-        />
-      ))}
+        let newClass = '';
+        if (index === 1) newClass = 'abc';
+        // const newClass = index === 1 ? 'abc' : ''; đây là viết tắt xử lý newClass
+        return (
+          <YoutubeItem
+            key={item.id}
+            image={item.image}
+            //xử lý trường hợp nếu truong dữ lieu bị null
+            avatar={item.avatar || item.image}
+            title={item.title}
+            author={item.author}
+            className={newClass}
+          />
+        );
+      })}
     </div>
   );
 }
@@ -30,7 +39,8 @@ function App() {
 function YoutubeItem(props) {
   // console.log(props);
   return (
-    <div className='youtube__item'>
+    //  {`... ${props.className}`} :  thêm 1 class bên ngoài vào
+    <div className={`youtube__item ${props.className}`}>
       <div className='youtube__image'>
         <img src={props.image} alt='youtube image' />
       </div>
