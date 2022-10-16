@@ -1,13 +1,10 @@
 import './App.css';
-import YoutubeList from './components/youtube/YoutubeList';
+import Toggle from './components/states/Toggle';
+
 function App() {
-  const name = 'leqdung';
   return (
     <div>
-      <YoutubeList>
-        {name}
-        {/* childrend props là những element, component,text, variable nằm giữa component */}
-      </YoutubeList>
+      <Toggle> </Toggle>
     </div>
   );
 }
