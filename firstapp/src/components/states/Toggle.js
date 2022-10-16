@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import './ToggleStyle.css';
 
 function Toggle() {
@@ -10,18 +10,17 @@ function Toggle() {
   //   console.login(On);
   // [active,setActive], [run, setRun],[love, setLove]
   //   state change => re-render
+  const clickButton = () => {
+    // khi giá trị phụ thuộc vào giá trị trước đó ta dùng callback
+    setOn((on) => !on);
+  };
   return (
     <div>
-      <div className={`toggle ${on ? 'active' : 'Off'}`}>
-        <div className={`snipper ${on ? 'active' : 'Off'}`}></div>
-      </div>
-      <div className='toggle__control'>
-        <div className='toggle__on' onClick={() => setOn(true)}>
-          On
-        </div>
-        <div className='toggle__off' onClick={() => setOn(false)}>
-          Off
-        </div>
+      <div className={`toggle ${on ? 'active' : ''}`} onClick={clickButton}>
+        <div
+          className={`snipper ${on ? 'active' : ''}`}
+          onClick={clickButton}
+        ></div>
       </div>
     </div>
   );
