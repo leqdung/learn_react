@@ -7,6 +7,8 @@ function Toggle() {
   // 3. reading state
   // 4. update state
   const [on, setOn] = useState(false);
+  //   luu ý hook chỉ dùng trong functional component nên chỉ được viết
+  //   bên ngoài
   //   console.login(On);
   // [active,setActive], [run, setRun],[love, setLove]
   //   state change => re-render
