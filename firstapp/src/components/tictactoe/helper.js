@@ -23,5 +23,5 @@ export function calculateWinner(cells) {
   return null;
 }
 
-// const test = [[null, null, null, 1, 1, 1, null, 1, null]];
-// console.log(calculateWinner(test));
+const test = [[null, null, null, 1, 1, 1, null, 1, null]];
+console.log(calculateWinner(test));

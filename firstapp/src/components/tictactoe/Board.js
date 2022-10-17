@@ -1,15 +1,16 @@
 import React from 'react';
-import Cells from './Cells';
 import { calculateWinner } from './helper.js';
 
-const Board = () => {
-  const test = [[null, null, null, 'X', 'X', 'X', null, 1, null]];
-  console.log(calculateWinner(test));
+const Board = (props) => {
+  const Cell = [null, null, null, 1, 1, 1, null, null, null];
+  console.log(calculateWinner(Cell));
   return (
     <div className='game-board'>
-      {Array[9].fill().map((item, index) => (
-        <Cells key={index}></Cells>
-      ))}
+      {Array(9)
+        .fill()
+        .map((item, index) => (
+          <Cell key={index}></Cell>
+        ))}
     </div>
   );
 };
