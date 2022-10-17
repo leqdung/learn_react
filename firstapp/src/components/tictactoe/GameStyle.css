@@ -1,0 +1,15 @@
+.game-board {
+  margin: 25px;
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+  display: grid;
+  background-color: #eee;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+.game-cell {
+  border: 1px solid #ccc;
+  background-color: red;
+  cursor: pointer;
+}
