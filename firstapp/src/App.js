@@ -1,11 +1,20 @@
 import React from 'react';
 import './App.css';
-import Card from './components/card/Card.js';
+import CardList from './components/card/CardList.js';
+import styled from 'styled-components';
+import Card from './components/card/Card';
 
 function App() {
   return (
     <div>
-      <Card></Card>
+      <CardList>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+      </CardList>
     </div>
   );
 }
