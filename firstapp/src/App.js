@@ -1,10 +1,11 @@
+import React from 'react';
 import './App.css';
-import Game from './components/tictactoe/Game';
+import Card from './components/card/Card.js';
 
 function App() {
   return (
     <div>
-      <Game></Game>
+      <Card></Card>
     </div>
   );
 }
